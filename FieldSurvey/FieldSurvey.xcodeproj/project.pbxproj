@@ -13,6 +13,14 @@
 		43B41AB2207881C500ACF71D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B41AB0207881C500ACF71D /* LaunchScreen.storyboard */; };
 		43B41ABD207881C500ACF71D /* FieldSurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41ABC207881C500ACF71D /* FieldSurveyTests.swift */; };
 		43B41AC8207881C500ACF71D /* FieldSurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41AC7207881C500ACF71D /* FieldSurveyUITests.swift */; };
+		43B41AD72078838300ACF71D /* field_observations.json in Resources */ = {isa = PBXBuildFile; fileRef = 43B41AD62078838300ACF71D /* field_observations.json */; };
+		43B41AD92078860C00ACF71D /* Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41AD82078860C00ACF71D /* Classification.swift */; };
+		43B41ADB2078887400ACF71D /* SightingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41ADA2078887400ACF71D /* SightingEvent.swift */; };
+		43B41ADD20788A1300ACF71D /* SightingEventJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41ADC20788A1300ACF71D /* SightingEventJSONParser.swift */; };
+		43B41ADF20788F6D00ACF71D /* SightingEventJSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41ADE20788F6D00ACF71D /* SightingEventJSONLoader.swift */; };
+		43B41AE1207890B800ACF71D /* SightingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41AE0207890B800ACF71D /* SightingEventsViewController.swift */; };
+		43B41AE3207891F800ACF71D /* SightingEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41AE2207891F800ACF71D /* SightingEventsTableViewCell.swift */; };
+		43B41AE52078922400ACF71D /* SightingEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B41AE42078922400ACF71D /* SightingEventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,14 @@
 		43B41AC3207881C500ACF71D /* FieldSurveyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FieldSurveyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B41AC7207881C500ACF71D /* FieldSurveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSurveyUITests.swift; sourceTree = "<group>"; };
 		43B41AC9207881C500ACF71D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43B41AD62078838300ACF71D /* field_observations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = field_observations.json; sourceTree = "<group>"; };
+		43B41AD82078860C00ACF71D /* Classification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classification.swift; sourceTree = "<group>"; };
+		43B41ADA2078887400ACF71D /* SightingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingEvent.swift; sourceTree = "<group>"; };
+		43B41ADC20788A1300ACF71D /* SightingEventJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingEventJSONParser.swift; sourceTree = "<group>"; };
+		43B41ADE20788F6D00ACF71D /* SightingEventJSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingEventJSONLoader.swift; sourceTree = "<group>"; };
+		43B41AE0207890B800ACF71D /* SightingEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingEventsViewController.swift; sourceTree = "<group>"; };
+		43B41AE2207891F800ACF71D /* SightingEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingEventsTableViewCell.swift; sourceTree = "<group>"; };
+		43B41AE42078922400ACF71D /* SightingEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingEventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +111,15 @@
 		43B41AA6207881C500ACF71D /* FieldSurvey */ = {
 			isa = PBXGroup;
 			children = (
+				43B41AD52078835A00ACF71D /* Model */,
 				43B41AA7207881C500ACF71D /* AppDelegate.swift */,
 				43B41AAB207881C500ACF71D /* Main.storyboard */,
 				43B41AAE207881C500ACF71D /* Assets.xcassets */,
 				43B41AB0207881C500ACF71D /* LaunchScreen.storyboard */,
 				43B41AB3207881C500ACF71D /* Info.plist */,
+				43B41AE0207890B800ACF71D /* SightingEventsViewController.swift */,
+				43B41AE2207891F800ACF71D /* SightingEventsTableViewCell.swift */,
+				43B41AE42078922400ACF71D /* SightingEventDetailViewController.swift */,
 			);
 			path = FieldSurvey;
 			sourceTree = "<group>";
@@ -120,6 +140,18 @@
 				43B41AC9207881C500ACF71D /* Info.plist */,
 			);
 			path = FieldSurveyUITests;
+			sourceTree = "<group>";
+		};
+		43B41AD52078835A00ACF71D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43B41AD62078838300ACF71D /* field_observations.json */,
+				43B41AD82078860C00ACF71D /* Classification.swift */,
+				43B41ADA2078887400ACF71D /* SightingEvent.swift */,
+				43B41ADC20788A1300ACF71D /* SightingEventJSONParser.swift */,
+				43B41ADE20788F6D00ACF71D /* SightingEventJSONLoader.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B41AB2207881C500ACF71D /* LaunchScreen.storyboard in Resources */,
+				43B41AD72078838300ACF71D /* field_observations.json in Resources */,
 				43B41AAF207881C500ACF71D /* Assets.xcassets in Resources */,
 				43B41AAD207881C500ACF71D /* Main.storyboard in Resources */,
 			);
@@ -256,7 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B41AD92078860C00ACF71D /* Classification.swift in Sources */,
 				43B41AA8207881C500ACF71D /* AppDelegate.swift in Sources */,
+				43B41AE3207891F800ACF71D /* SightingEventsTableViewCell.swift in Sources */,
+				43B41AE52078922400ACF71D /* SightingEventDetailViewController.swift in Sources */,
+				43B41AE1207890B800ACF71D /* SightingEventsViewController.swift in Sources */,
+				43B41ADD20788A1300ACF71D /* SightingEventJSONParser.swift in Sources */,
+				43B41ADF20788F6D00ACF71D /* SightingEventJSONLoader.swift in Sources */,
+				43B41ADB2078887400ACF71D /* SightingEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
